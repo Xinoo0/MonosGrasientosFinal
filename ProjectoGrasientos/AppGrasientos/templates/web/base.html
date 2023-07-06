@@ -43,6 +43,19 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'register' %}">Registrarse</a>
+              </li>
+              <li class="nav-item dropdown" @login_required>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Panel Administrador
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url 'crud' %}">Inventario</a></li>
+                  <li><a class="dropdown-item" href="#"></a></li>
+                  <li><a class="dropdown-item" href="#"></a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -58,18 +71,6 @@
 
 
     <!-- FOOTER -->
-    {% block footer %}
-    <div class="footer">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Monos Grasientos</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-    </div>
-    {% endblock %}
+
 </body>
 </html>
